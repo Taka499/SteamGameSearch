@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:id="@+id/searchWord"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/editbox_background"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:hint="@string/search_hint"
+        app:layout_constraintBottom_toTopOf="@id/submit" />
+
+    <Button
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/searchWord"
+        />
+
+    <TextView
+        android:id="@+id/search_result_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px"
+        android:text="Search Result of ..."
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"/>
+
+</LinearLayout>
